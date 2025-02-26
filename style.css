@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(156, 217, 230);
+    font-family:Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding:20px;
+    box-sizing: border-box;
+    user-select: none;
+}
+.main-container{
+    background-color: whitesmoke;
+    padding:30px;
+    border-radius: 20px;
+    /*changing width from 60 to 100*/
+    width: 60%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+h2::after{
+    margin-left:4px;
+}
+
+.input-container{
+    display:flex;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
+
+input[type="text"]{
+    flex:1;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+input[type="checkbox"]{
+    margin-right: 10px;
+    transform: scale(1.8);
+    border-radius: 50%;
+   
+
+}
+
+input[type="checkbox"]:checked + span{
+    text-decoration: line-through;
+    color: #888;
+}
+
+button{
+    background-color: rgb(23, 129, 215);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:25px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+   
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    padding:12px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+li:last-child{
+    border-bottom:none;
+   
+}
+
+.checked{
+    text-decoration: line-through;
+    color: #888;
+}
+.delete{
+    color:red;
+    margin-left:auto;
+    cursor:pointer;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 20px;
+        width:80%;
+
+    }
+    input[type="text"]{
+        width: 100%;
+        margin-bottom: 5px;
+        padding:8px 8px;
+    }
+    #addButton{
+        width:80%;
+        padding:8px 8px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 20px;
+        width:80%;
+       
+    }
+    input[type="text"]{
+        width: 100%;
+        margin-bottom: 5px;
+        padding:8px 8px;
+    }
+    #addButton{
+        width:85%;
+        padding:8px 8px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #addButton {
+        width: 100%;
+    }
+}
