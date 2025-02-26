@@ -20,6 +20,7 @@ body{
     border-radius: 20px;
     /*changing width from 60 to 100*/
     width: 60%;
+    margin-top: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 h2{
