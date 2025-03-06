@@ -6,7 +6,8 @@ addBtn.addEventListener('click', () => {
     const task = input.value;
     if (task) {
         const li = document.createElement('li');
-        li.innerHTML = `<input type="checkbox"><span>${task}</span><span class="delete">&times;</span>`;
+        // In script.js, modify the li creation line
+        li.innerHTML = `<input type="checkbox"><span class="task-text">${task}</span><span class="delete">&times;</span>`;
         list.appendChild(li);
         input.value = '';
     }
