@@ -8,36 +8,54 @@ body{
     font-family:Arial,sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 80vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: auto;
     padding:20px;
     box-sizing: border-box;
     user-select: none;
+    overflow-y: visible;
+}
+html {
+    overflow-y: scroll; /* Always show vertical scrollbar */
 }
 .main-container{
     background-color: whitesmoke;
+    min-width: 300px;
     padding:30px;
     border-radius: 20px;
-    /*changing width from 60 to 100*/
     width: 60%;
     margin-top: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom:40px;
+    position: relative;
 }
+
+/* New header container styling */
+.header-container {
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    margin: -30px -30px 20px;
+    padding: 30px 30px 10px;
+    z-index: 3;
+    border-radius: 20px 20px 0 0;
+}
+
 h2{
     color: black;
     display: flex;
     align-items: center;
     font-size: 24px;
+    margin-bottom: 15px;
 }
 h2::after{
     margin-left:4px;
 }
 
 .input-container{
-    display:flex;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    
+    display: flex;
+    margin-bottom: 15px;
 }
 
 input[type="text"]{
@@ -52,8 +70,6 @@ input[type="checkbox"]{
     margin-right: 10px;
     transform: scale(1.8);
     border-radius: 50%;
-   
-
 }
 
 input[type="checkbox"]:checked + span{
@@ -71,7 +87,6 @@ button{
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-   
 }
 
 ul{
@@ -99,7 +114,6 @@ li{
 
 li:last-child{
     border-bottom:none;
-   
 }
 
 .checked{
@@ -112,23 +126,30 @@ li:last-child{
     cursor:pointer;
     font-size: 25px;
     flex-shrink: 0;
-
 }
 
 @media (max-width: 768px) {
     .main-container {
         padding: 20px;
-        width:80%;
-
+        width: 80%;
+        min-width: 400px;
+        max-width: 800px;
     }
+    
+    .header-container {
+        margin: -20px -20px 15px;
+        padding: 20px 20px 10px;
+    }
+    
     input[type="text"]{
         width: 100%;
         margin-bottom: 5px;
-        padding:8px 8px;
+        padding: 8px 8px;
     }
+    
     #addButton{
-        width:80%;
-        padding:8px 8px;
+        width: 80%;
+        padding: 8px 8px;
         margin-left: 0;
         margin-top: 5px;
     }
@@ -138,22 +159,26 @@ li:last-child{
         align-items: center;
     }
 
+    #addButton {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
     .main-container {
         padding: 20px;
-        width:80%;
-       
+        width: 80%;
     }
+    
     input[type="text"]{
         width: 100%;
         margin-bottom: 5px;
-        padding:8px 8px;
+        padding: 8px 8px;
     }
+    
     #addButton{
-        width:85%;
-        padding:8px 8px;
+        width: 85%;
+        padding: 8px 8px;
         margin-left: 0;
         margin-top: 5px;
     }
